@@ -7,9 +7,9 @@ export default function(props)
         <ul>
             {props.items.map((name) => {
                 if(name == props.room)
-                    return <li><b><span onClick={() => props.onSelect(name)} >{name}</span></b></li>;
+                    return <li onClick={() => props.onSelect(name)}><b>[ {name} ]</b></li>;
 
-                return <li><span onClick={() => props.onSelect(name)} >{name}</span></li>
+                return <li onClick={() => props.onSelect(name)}>{name}</li>
             })}
         </ul>
     </div>

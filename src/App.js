@@ -1,15 +1,38 @@
 import React from 'react';
+import Rooms from './components/Rooms';
+import Chat  from './components/Chat';
 
-function Test (props) {
-    return <div>Меня зовут {props.name}</div>
-}
+var data = {
+    user: 'Загадочный ловелас',
+    room: 'Общий чат',
+    rooms: [
+        'Общий чят',
+        'Новости',
+        'Домашние животные',
+        'Мотороллеры',
+        'Что делать если я Геннадий?'
+    ],
+    messages: [
+        {from: 'Кайл', msg: 'всем привет!!'},
+        {from: 'Кенни', msg: 'ыыыы'},
+        {from: '_^^nogibat0r9000^^_', msg: 'ыыыыыы!!'},
+        {from: 'Стен', msg: 'ЫЫЫЫЫЫ!'},
+        {from: '_^^nogibat0r9000^^_', msg: 'sss111111'},
+        {from: 'Кайл', msg:'яснопонятно =('}
+    ]
+};
 
 export default class App extends React.Component {
+
+    selectRoom(room)
+    {
+        console.log(room);
+    }
+
     render() {
         return <div>
-            <Test name="В. Вася"/>
-            <Test name="П. Петя"/>
-            <Test name="А. Вассерман"/>
+            <Rooms room={data.room} items={data.rooms} onSelect={(r) => this.selectRoom(r)} />
+            <Chat items={data.messages} user={data.user}/>
         </div>
     }
 }
