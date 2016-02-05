@@ -1,7 +1,4 @@
 ```
 npm install
-```
-
-```
-webpack
+webpack --watch
 ```

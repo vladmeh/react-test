@@ -5,6 +5,15 @@ logs
 *.log
 npm-debug.log*
 
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
 # Runtime data
 pids
 *.pid
